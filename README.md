@@ -1,4 +1,5 @@
 <h1>habr-freelance-parser</h1>
+<hr>
 
 <b>Бот-парсер</b> для сервиса <b><a href="https://freelance.habr.com">Хабр Фриланс</a></b> в <b>Telegram.</b><br>Оперативный и быстрый поиск заказов для фрилансеров.
 <hr>
