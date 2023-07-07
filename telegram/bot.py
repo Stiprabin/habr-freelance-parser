@@ -1,4 +1,4 @@
-from aiogram import Bot, Dispatcher
+from aiogram import Bot, Dispatcher, executor
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters import Text
@@ -35,3 +35,12 @@ async def on_shutdown(_):
     await dp.storage.close()
     await dp.storage.wait_closed()
     logging.warning("Прощай, мой юный друг!")
+
+
+async def start_bot():
+    await executor.start_polling(
+        dispatcher=dp,
+        on_startup=on_startup,
+        on_shutdown=on_shutdown,
+        skip_updates=True
+    )
