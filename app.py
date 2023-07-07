@@ -1,13 +1,20 @@
-from telegram.bot import start_bot
-from fastapi import FastAPI
+from flask import Flask
 from threading import Thread
 
 
-app = FastAPI()
+app = Flask(__name__)
 
 
-# запуск бота
-@app.on_event("startup")
-async def home():
-    thread = Thread(target=start_bot)
+@app.route('/')
+def home():
+    return "И чёрт умеет иной раз сослаться на священное писание."
+
+
+def run():
+    app.run(host="0.0.0.0", port=80)
+
+
+# запустить веб-приложение в отдельном потоке
+def flask_thread():
+    thread = Thread(target=run)
     thread.start()
