@@ -1,6 +1,6 @@
 from telegram.bot import start_bot
 from fastapi import FastAPI
-import asyncio
+from threading import Thread
 
 
 app = FastAPI()
@@ -9,4 +9,5 @@ app = FastAPI()
 # запуск бота
 @app.on_event("startup")
 async def home():
-    asyncio.create_task(start_bot())
+    thread = Thread(target=start_bot)
+    thread.start()
