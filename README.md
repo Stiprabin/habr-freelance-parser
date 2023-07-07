@@ -5,11 +5,11 @@
 ### Bot-parser for service *[Habr Freelance](https://freelance.habr.com)* in Telegram. Prompt and fast search for orders for freelancers. ###
 ---
 #### Команды / commands ####
-<img src="screenshots/screenshot_1.png" width="50">
+<img src="screenshots/screenshot_1.png" width="300">
 ---
 #### Условия / conditions ####
-![](screenshots/screenshot_2.png)
+<img src="screenshots/screenshot_2.png" width="300">
 ---
 #### Запрос и результат / Request and result ####
-![](screenshots/screenshot_3.png)
+<img src="screenshots/screenshot_3.png" width="300">
 ---
