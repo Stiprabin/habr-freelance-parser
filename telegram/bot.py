@@ -4,6 +4,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters import Text
 from telegram.handlers import commands, orders
 from telegram.state_group import OrdersGroup
+from app import flask_thread
 import logging
 import config
 
@@ -27,7 +28,7 @@ dp.register_callback_query_handler(orders.orders_message, state=OrdersGroup.mess
 
 
 async def on_startup(_):
-    print("Доверять другим -- это хорошо, но гораздо лучше не доверять.")
+    print("Доверять другим — это хорошо, но гораздо лучше не доверять.")
 
 
 async def on_shutdown(_):
@@ -37,7 +38,9 @@ async def on_shutdown(_):
     logging.warning("Прощай, мой юный друг!")
 
 
-def start_bot():
+# запустить бота и веб-приложение
+if __name__ == "__main__":
+    flask_thread()
     executor.start_polling(
         dispatcher=dp,
         on_startup=on_startup,
