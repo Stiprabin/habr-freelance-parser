@@ -1,4 +1,4 @@
-# habr-freelance-parser
+<h1>habr-freelance-parser</h1>
 ---
 ### Бот-парсер для сервиса *[Хабр Фриланс](https://freelance.habr.com)* в Telegram. Оперативный и быстрый поиск заказов для фрилансеров. ###
 ---
