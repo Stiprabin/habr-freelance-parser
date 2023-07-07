@@ -1,17 +1,17 @@
 <h1>habr-freelance-parser</h1>
 <hr>
 
-Бот-парсер для сервиса <a href="https://freelance.habr.com">Хабр Фриланс</a> в Telegram.<br>Оперативный и быстрый поиск заказов для фрилансеров.
+<b>Бот-парсер</b> для сервиса <a href="https://freelance.habr.com">Хабр Фриланс</a> в <b>Telegram.</b><br>Оперативный и быстрый поиск заказов для фрилансеров.
 <hr>
 
-Bot-parser for service <a href="https://freelance.habr.com">Habr Freelance</a> in Telegram.<br>Prompt and fast search for orders for freelancers.
+<b>Bot-parser</b> for service <a href="https://freelance.habr.com">Habr Freelance</a> in <b>Telegram.</b><br>Prompt and fast search for orders for freelancers.
 <hr>
 
-Команды / commands
+<b>Команды / commands</b><br>
 <img src="screenshots/screenshot_1.png" width="500">
 
-Условия / conditions
+<b>Условия / conditions</b><br>
 <img src="screenshots/screenshot_2.png" width="500">
 
-Запрос и результат / Request and result
+<b>Запрос и результат / Request and result</b><br>
 <img src="screenshots/screenshot_3.png" width="500">
