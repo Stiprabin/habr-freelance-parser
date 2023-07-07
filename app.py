@@ -1,6 +1,6 @@
-from aiogram import executor
-from telegram.bot import dp, on_startup, on_shutdown
+from telegram.bot import start_bot
 from fastapi import FastAPI
+import asyncio
 
 
 app = FastAPI()
@@ -9,9 +9,4 @@ app = FastAPI()
 # запуск бота
 @app.on_event("startup")
 async def home():
-    executor.start_polling(
-        dispatcher=dp,
-        on_startup=on_startup,
-        on_shutdown=on_shutdown,
-        skip_updates=True
-    )
+    asyncio.create_task(start_bot())
