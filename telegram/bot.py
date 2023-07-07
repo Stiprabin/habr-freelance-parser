@@ -37,8 +37,8 @@ async def on_shutdown(_):
     logging.warning("Прощай, мой юный друг!")
 
 
-async def start_bot():
-    await executor.start_polling(
+def start_bot():
+    executor.start_polling(
         dispatcher=dp,
         on_startup=on_startup,
         on_shutdown=on_shutdown,
