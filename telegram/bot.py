@@ -1,10 +1,9 @@
-from aiogram import Bot, Dispatcher, executor
+from aiogram import Bot, Dispatcher
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters import Text
 from handlers import commands, orders
-from telegram.state_group import OrdersGroup
-from flask_app import flask_thread
+from state_group import OrdersGroup
 import logging
 import config
 
@@ -36,14 +35,3 @@ async def on_shutdown(_):
     await dp.storage.close()
     await dp.storage.wait_closed()
     logging.warning("Прощай, мой юный друг!")
-
-
-# запуск веб-приложения и бота
-if __name__ == "__main__":
-    flask_thread()
-    executor.start_polling(
-        dispatcher=dp,
-        on_startup=on_startup,
-        on_shutdown=on_shutdown,
-        skip_updates=True
-    )
