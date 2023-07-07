@@ -64,5 +64,5 @@ async def get_soup(url):
         print(f"Error: {response.status_code}. Пiшов нахрен, Iрис") # локальная шутка
         return "Error"
 
-    soup = BeautifulSoup(response.text, "lxml")
+    soup = BeautifulSoup(response.text, "parser.html")
     return soup
