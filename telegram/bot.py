@@ -2,8 +2,8 @@ from aiogram import Bot, Dispatcher
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters import Text
-from handlers import commands, orders
-from state_group import OrdersGroup
+from telegram.handlers import commands, orders
+from telegram.state_group import OrdersGroup
 import logging
 import config
 
